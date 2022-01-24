@@ -25,9 +25,9 @@ body {
 	height: 100px;
     margin:5% 5%;
 	border-radius: 20px;
-	font-size: xx-large;
+	font-size: 90px;
 	color: #000000;
-	text-align: center;
+	text-align: right;
 }
 
 .request-btns{
