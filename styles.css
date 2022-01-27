@@ -1,70 +1,43 @@
 body {
     width: 90%;
-    margin:auto;
-   
+    margin:auto; 
+}
+
+* {
+    box-sizing:border-box;
 }
 
 #title {
-    text-align:center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 60px;
+    text-align: center;
 }
 
-.calcFrame{
-    border: 2px solid #000;
-    background-color: #ececec;
-    margin-left:25%;
-    width:50%;
-    height: 705px;
-    border-radius: 5%
+.frame {
+    width: 28%;
+    height: 60%;
+    margin: auto;
+    border: 8px solid red;
+    background-color: black;
 }
 
-.display{
-    background-color: #d1e0e0;
-	width: 90%;
-	height: 100px;
-    margin:4% 5%;
-	border-radius: 20px;
-	font-size: 90px;
-	color: #000000;
-	text-align: right;
+.display-screen {
+   background-color: white;
+   height: 100px;
 }
 
-.request-btns{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.calc-pad {
+
 }
 
-.request-btns button {
-    height: 70px;
-    margin: 15px;
-    font-size: 70px;
-    background-color: #385170;
-    color:#fff;
+#enter {
+    grid-column: span 2;
+}
     
+.calc-btns {
+ display: grid;
+ justify-content: center;
+ align-content: center;
+ min-height: 100vh;
+ grid-template-columns: repeat(4, 75px);
+ grid-template-rows: minmax(75px, auto) repeat(5, 75px);
 }
 
-#parenthesis {
-    font-size:58px;
-}
-
-#negative {
-    font-size: 58px;
-}
-
-#divide {
-    width: 10%;
-}
-
-#subtract{
-    width:10%;
-}
-
-#decimal{
-    width:10%
-}
-
-#enter{
-    width: 50%;
-}

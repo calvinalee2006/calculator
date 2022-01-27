@@ -1,4 +1,13 @@
-const calcBtns = document.querySelector('request-btns').addEventListener.value('submit', (e) => {
-    document.getElementById('screen').textContent = calcBtns;
+const calcBtns = document.getElementById('calc-btns');
+
+
+
+calcBtns.addEventListener('click', event => {
+    if (event.target.contains('button')) {
+        return
+    }
 })
+
+
+
 
