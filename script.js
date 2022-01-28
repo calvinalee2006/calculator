@@ -1,12 +1,12 @@
-const calcBtns = document.getElementById('calc-btns');
+const calcBtns = document.getElementById('calc-btns').children;
+const display = document.getElementById('display-screen');
 
 
 
-calcBtns.addEventListener('click', event => {
-    if (event.target.contains('button')) {
-        return
-    }
-})
+
+
+
+
 
 
 

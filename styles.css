@@ -24,9 +24,6 @@ body {
    height: 100px;
 }
 
-.calc-pad {
-
-}
 
 #enter {
     grid-column: span 2;
