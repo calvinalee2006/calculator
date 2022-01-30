@@ -26,7 +26,7 @@ body {
 
 
 #enter {
-    grid-column: span 2;
+    grid-column: span 4;
 }
     
 .calc-btns {
