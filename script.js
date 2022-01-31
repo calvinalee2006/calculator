@@ -25,17 +25,20 @@ let operator = "";
 
 
 document.addEventListener('click', function (e) {
-    if (e.target.className === "number") {
-        if (firstOperandStored === true) {
-            display.value = "";
-            display.value = e.target.textContent;
-        }
-        if (firstOperandStored === false) {
-            console.log(e.target.textContent);
-            display.value = e.target.textContent;
-        }
+    //for loop? or forEach? hmmm......
 
-    }
+    for (i = 0; i < firstOperand; i++)
+        if (e.target.className === "number") {
+            if (firstOperandStored === true) {
+                display.value = "";
+                display.value = e.target.textContent;
+            }
+            if (firstOperandStored === false) {
+                console.log(e.target.textContent);
+                display.value = e.target.textContent;
+            }
+
+        }
 })
 
 
@@ -50,10 +53,30 @@ document.addEventListener('click', function (e) {
 })
 
 document.addEventListener('click', function (e) {
-    if (e.target.className === "decimal") {
+    if (e.target.className === "L-para") {
         decimal = display.value;
         console.log(e.target.textContent);
         display.value = e.target.textContent;
+    }
+})
+
+document.addEventListener('click', function (e) {
+    if (e.target.className === "R-para") {
+        decimal = display.value;
+        console.log(e.target.textContent);
+        display.value = e.target.textContent;
+    }
+})
+
+document.addEventListener('click', function (e) {
+    if (e.target.className === "clear") {
+        //Enter functionality for clear button
+    }
+})
+
+document.addEventListener('click', function (e) {
+    if (e.target.className === "percent") {
+        //Enter functionality for modulo
     }
 })
 
