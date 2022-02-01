@@ -26,19 +26,17 @@ let operator = "";
 
 document.addEventListener('click', function (e) {
     //for loop? or forEach? hmmm......
-
-    for (i = 0; i < firstOperand; i++)
-        if (e.target.className === "number") {
-            if (firstOperandStored === true) {
-                display.value = "";
-                display.value = e.target.textContent;
-            }
-            if (firstOperandStored === false) {
-                console.log(e.target.textContent);
-                display.value = e.target.textContent;
-            }
-
+    if (e.target.className === "number") {
+        if (firstOperandStored === true) {
+            display.value = "";
+            display.value = e.target.textContent;
         }
+        if (firstOperandStored === false) {
+            console.log(e.target.textContent);
+            display.value = e.target.textContent;
+        }
+
+    }
 })
 
 
