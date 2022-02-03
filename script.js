@@ -6,6 +6,7 @@ const calcPad = document.getElementById("calc-btns");
 let firstOperand = "";
 let secondOperand = "";
 let operator = " ";
+let sum = "";
 
 //For my numbers on my calculator
 numberBtns.forEach(number => {
@@ -31,8 +32,8 @@ operatorBtns.forEach(symbol => {
 })
 
 //Enter Button
-document.addEventListener('click', function (e) {
-    if (e.target.className === "enter") {
+document.addEventListener('click', event => {
+    if (event.target.className === "enter") {
         solveProblem();
     }
 })
@@ -40,7 +41,7 @@ document.addEventListener('click', function (e) {
 //Math symbols function
 function solveProblem() {
     if (operator == "+") {
-        return `${firstOperand} + ${secondOperand}`
+        return sum = parseInt(firstOperator, secondOperator);
     }
     if (operator === "-") {
         secondOperand = display.value;
