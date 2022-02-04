@@ -5,20 +5,20 @@ const calcPad = document.getElementById("calc-btns");
 
 let firstOperand = "";
 let secondOperand = "";
-let operator = " ";
+let operator = "";
 let sum = "";
 
 //For my numbers on my calculator
 numberBtns.forEach(number => {
     number.addEventListener('click', event => {
-        //console.log(event.target.textContent);
-        displayScreen.value += event.target.textContent
-        if (operator === "") {
-            firstOpernd += event.target.textContent;
-            console.log(firstOperand)
+        if (operator === '') {
+            firstOperand += event.target.textContent;// spelling error operand was spelled wrong
+            displayScreen.value += firstOperand;
+            console.log(`firstOperand: ${firstOperand}`);
         } else {
             secondOperand += event.target.textContent;
-            console.log(secondOperand)
+            displayScreen.value += secondOperand;
+            console.log(`secondOperand: ${secondOperand}`);
         };
     });
 })
@@ -26,22 +26,23 @@ numberBtns.forEach(number => {
 //For my Operators on my calculator 
 operatorBtns.forEach(symbol => {
     symbol.addEventListener('click', event => {
-        console.log(event.target.textContent);
-        displayScreen.value += event.target.textContent
+        console.log(`operator: `, event.target.textContent);
+        operator = event.target.textContent;
+        displayScreen.value = ''
     })
 })
 
 //Enter Button
 document.addEventListener('click', event => {
     if (event.target.className === "enter") {
-        solveProblem();
+        solveProblem()
     }
 })
 
 //Math symbols function
 function solveProblem() {
     if (operator == "+") {
-        return sum = parseInt(firstOperator, secondOperator);
+        displayScreen.value = parseInt(firstOperand) + parseInt(secondOperand);
     }
     if (operator === "-") {
         secondOperand = display.value;
