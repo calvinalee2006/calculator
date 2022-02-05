@@ -2,23 +2,28 @@ const displayScreen = document.getElementById('display-screen');
 const numberBtns = document.querySelectorAll(".number")
 const operatorBtns = document.querySelectorAll(".operator")
 const calcPad = document.getElementById("calc-btns");
+const resetCalc = document.querySelectorAll('.clear');
 
 let firstOperand = "";
 let secondOperand = "";
+let previousOperand = "";
 let operator = "";
-let sum = "";
+
 
 //For my numbers on my calculator
 numberBtns.forEach(number => {
     number.addEventListener('click', event => {
-        if (operator === '') {
-            firstOperand += event.target.textContent;// spelling error operand was spelled wrong
-            displayScreen.value += firstOperand;
+
+        if (operator == '') {
+            firstOperand = event.target.textContent;
+            displayScreen.value = firstOperand;
             console.log(`firstOperand: ${firstOperand}`);
         } else {
-            secondOperand += event.target.textContent;
-            displayScreen.value += secondOperand;
+            (operator == "")
+            secondOperand = event.target.textContent;
+            displayScreen.value = secondOperand;
             console.log(`secondOperand: ${secondOperand}`);
+            console.log(`previousOperand: ${previousOperand}`)
         };
     });
 })
@@ -29,6 +34,7 @@ operatorBtns.forEach(symbol => {
         console.log(`operator: `, event.target.textContent);
         operator = event.target.textContent;
         displayScreen.value = ''
+        solveProblem()
     })
 })
 
@@ -39,25 +45,30 @@ document.addEventListener('click', event => {
     }
 })
 
+
+// clear button
+resetCalc.forEach(reset =>
+    reset.addEventListener('click', event => {
+        console.log('clear')
+        event.preventDefault();
+        displayScreen.value = ""
+    }))
+
 //Math symbols function
 function solveProblem() {
     if (operator == "+") {
         displayScreen.value = parseInt(firstOperand) + parseInt(secondOperand);
     }
     if (operator === "-") {
-        secondOperand = display.value;
-        display.value = +firstOperand - +secondOperand;
+        displayScreen.value = parseInt(firstOperand) - parseInt(secondOperand);
     }
     if (operator === "X") {
-        secondOperand = display.value;
-        display.value = +firstOperand * +secondOperand;
+        displayScreen.value = parseInt(firstOperand) * parseInt(secondOperand);
     }
     if (operator === "/") {
-        secondOperand = display.value;
-        display.value = +firstOperand / +secondOperand;
+        displayScreen.value = parseInt(firstOperand) / parseInt(secondOperand);
+    }
+    if (operator === "%") {
+        displayScreen.value = parseInt(firstOperand) % parseInt(secondOperand);
     }
 }
-
-
-
-
