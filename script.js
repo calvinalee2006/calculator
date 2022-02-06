@@ -2,39 +2,37 @@ const displayScreen = document.getElementById('display-screen');
 const numberBtns = document.querySelectorAll(".number")
 const operatorBtns = document.querySelectorAll(".operator")
 const calcPad = document.getElementById("calc-btns");
-const resetCalc = document.querySelectorAll('.clear');
+const resetButton = document.querySelector('.clear');
 
 let firstOperand = "";
 let secondOperand = "";
-let previousOperand = "";
 let operator = "";
 
 
 //For my numbers on my calculator
 numberBtns.forEach(number => {
     number.addEventListener('click', event => {
-
-        if (operator == '') {
-            firstOperand = event.target.textContent;
+        if (!operator) {
+            firstOperand += event.target.textContent;
             displayScreen.value = firstOperand;
             console.log(`firstOperand: ${firstOperand}`);
         } else {
-            (operator == "")
-            secondOperand = event.target.textContent;
+            secondOperand += event.target.textContent;
             displayScreen.value = secondOperand;
             console.log(`secondOperand: ${secondOperand}`);
-            console.log(`previousOperand: ${previousOperand}`)
-        };
+        }
     });
-})
+});
 
 //For my Operators on my calculator 
-operatorBtns.forEach(symbol => {
-    symbol.addEventListener('click', event => {
-        console.log(`operator: `, event.target.textContent);
-        operator = event.target.textContent;
-        displayScreen.value = ''
-        solveProblem()
+operatorBtns.forEach(operatorBtns => {
+    operatorBtns.addEventListener('click', event => {
+        if (firstOperand && secondOperand) {
+            solveProblem();
+        } else {
+            operator = event.target.textContent;
+            displayScreen.value = operator;
+        }
     })
 })
 
@@ -47,12 +45,12 @@ document.addEventListener('click', event => {
 
 
 // clear button
-resetCalc.forEach(reset =>
-    reset.addEventListener('click', event => {
-        console.log('clear')
-        event.preventDefault();
-        displayScreen.value = ""
-    }))
+resetButton.addEventListener('click', () => {
+    displayScreen.value = "0";
+    firstOperand = "";
+    secondOperand = "";
+    operator = "";
+});
 
 //Math symbols function
 function solveProblem() {
@@ -71,4 +69,8 @@ function solveProblem() {
     if (operator === "%") {
         displayScreen.value = parseInt(firstOperand) % parseInt(secondOperand);
     }
+    firstOperand = displayScreen.value;
+    secondOperand = "";
+
+
 }
