@@ -1,40 +1,51 @@
 body {
     width: 90%;
-    margin:auto; 
-}
-
-* {
-    box-sizing:border-box;
+    margin:0;
+    padding: 0; 
+    background: linear-gradient(to right, #00AAFF, #00ff6C)
 }
 
 #title {
     text-align: center;
+    color: #ffff;
+    font-size:60px
 }
 
 .frame {
     width: 28%;
-    height: 60%;
     margin: auto;
-    border: 8px solid red;
-    background-color: black;
+
 }
 
-.display-screen {
-   background-color: white;
-   height: 100px;
+#display-screen {
+    color: black;
+    width: 295px;
+    height:100px;
+    font-size: 40px;
+    text-align: right;
+  margin-left: 8px;
+  
 }
-
-
-#enter {
-    grid-column: span 4;
-}
-    
+  
 .calc-btns {
  display: grid;
  justify-content: center;
  align-content: center;
+ align-content: center;
  min-height: 100vh;
  grid-template-columns: repeat(4, 75px);
  grid-template-rows: minmax(75px, auto) repeat(5, 75px);
+ margin:-215px
 }
 
+.calc-btns > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #ffff;
+    outline: none;
+    background-color: rgba(255,255,255,.75)
+}
+
+.calc-btns > button:hover {
+    background-color: rgba(255,255,255,.9)
+}

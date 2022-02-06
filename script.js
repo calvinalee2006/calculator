@@ -43,6 +43,20 @@ document.addEventListener('click', event => {
     }
 })
 
+//Left Parenthesis
+document.addEventListener('click', event => {
+    if (event.target.className === "L-para") {
+        displayScreen.value = event.target.textContent;
+    }
+})
+
+//Left Parenthesis
+document.addEventListener('click', event => {
+    if (event.target.className === "R-para") {
+        displayScreen.value = event.target.textContent;
+    }
+})
+
 
 // clear button
 resetButton.addEventListener('click', () => {
@@ -71,6 +85,4 @@ function solveProblem() {
     }
     firstOperand = displayScreen.value;
     secondOperand = "";
-
-
 }
