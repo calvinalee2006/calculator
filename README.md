@@ -4,12 +4,10 @@
 
 click [here](https://calvinalee2006.github.io/calculator/) to see the calculator in action!
 
-![Digital clock](images/Screenshot%20(18).png)
+![calculator](images/Screenshot%20(29).png)
 
 ### Summary
-This digital clock was part of the mastermind program I attended to improve my skills as a
-web developer. It was a bit more difficult becuase I added JavaScript to the project and 
-through a lot of trial and error as well as reading, I finally got it to work. Showing the proper date in a 12-hour format. 
+This calculator was one of the TOUGHEST projects I have done as starting developer. I learned a lot from diagnosing bugs and coding nonstop just to fix one thing. I feel this project made me grow as a developer and improved my skills, though I have a long wat to go! 
 
 ### Author
 - Calvin A. Lee -Software engineer - [github](https://github.com/calvinalee2006) | [linkden](https://www.linkedin.com/in/calvin-lee-90082006/)
