@@ -33,7 +33,7 @@ body {
  min-height: 100vh;
  grid-template-columns: repeat(4, 75px);
  grid-template-rows: minmax(75px, auto) repeat(5, 75px);
- margin:-125px
+ 
 }
 
 .calc-btns > button {
