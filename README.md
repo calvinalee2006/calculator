@@ -4,8 +4,6 @@
 
 click [here](https://calvinalee2006.github.io/calculator/) to see the calculator in action!
 
-![calculator](./images/Screenshot%20(29).png)
-
 ### Summary
 This calculator was one of the TOUGHEST projects I have done as starting developer. I learned a lot from diagnosing bugs and coding nonstop just to fix one thing. I feel this project made me grow as a developer and improved my skills, though I have a long wat to go! 
 
